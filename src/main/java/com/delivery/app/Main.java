@@ -17,4 +17,9 @@ public class Main {
 	public String apiRoot() {
 		return "Hello world";
 	}
+
+	@GetMapping("/auth")
+	public String authPage() {
+		return "auth";
+	}
 }

@@ -27,7 +27,7 @@ public class UserController {
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody Map<String, String> request) {
         String username = request.get("username");
-        String password = request.get("password");
+        String password = request.get("password_hash");
         Optional<User> user = userService.loginUser(username, password);
         if (user.isPresent()) {
             Map<String, String> response = new HashMap<>();
